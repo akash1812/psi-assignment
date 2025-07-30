@@ -16,7 +16,7 @@ app.post('/signup', (req,res)=>{
     bcrypt.hash(pass, 8, (err, hashedP)=>{
         if(err){
             res.status(500).json({
-                msg: "error in hashing"
+                msg: "error in hashing the password"
             })
         }
         res.status(200).json({
